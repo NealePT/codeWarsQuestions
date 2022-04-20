@@ -1,0 +1,3 @@
+const jadenCase = function(string) {
+  
+};
