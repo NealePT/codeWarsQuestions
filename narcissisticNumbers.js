@@ -15,5 +15,20 @@
 // Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 
 const narcissistic = (value) => {
-  
+  const str = String(value).split('');
+
+  let result = 0;
+
+  for (let i of str) {
+    const num = parseInt(i, 0);
+
+    result += Math.pow(num, str.length);
+  }
+
+  return result === value;
 };
+
+console.log(narcissistic(7)); // true
+console.log(narcissistic(153)); // true
+console.log(narcissistic(1652)); // false
+console.log(narcissistic(8208)); // true
