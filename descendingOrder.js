@@ -8,5 +8,7 @@
 // Input: 123456789 Output: 987654321
 
 const descendingOrder = (number) => {
-  
+  return parseInt(String(number).split('').sort().reverse().join(''));
 };
+
+console.log(descendingOrder(42145)); // 54421
