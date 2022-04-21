@@ -24,10 +24,10 @@
 // (Condition 2) not fulfilled).
 
 const bouncingBall = (h, bounce, window) => {
-  if ((h < 0) || (bounce <= 0) || (bounce >= 1) || (window > h)) {
-    return -1;
+  if (h > 0 && (bounce > 0 && bounce < 1) && window < h) {
+    return h < window ? -1 : 2 + bouncingBall((h * bounce), bounce, window);
   }
-  
+  return -1;
 };
 
 console.log(bouncingBall(3, 0.66, 1.5)); // 3
