@@ -7,22 +7,20 @@
 // If a string contains all repeating characters, it should return an empty string ("") or None -- see sample tests.
 
 const firstNonRepeatingLetter = (string) => {
-  const array = [];
-  // let result = [];
-  for (let i = 0; i < string.length; i++) {
-    array.push(string[i]);
-  }
+  const array = string.toLowerCase().split('');
   for (let x = 0; x < array.length; x++) {
     let newArr = [...array];
     newArr.splice(x, 1);
-    // console.log(newArr);
     if (!newArr.includes(array[x])) {
-      // console.log(array[x]);
-      // result.push(array[x]);
-      return array[x];
+      if (array[x] === string[x]) {
+        return array[x];
+      } else {
+        let result = array[x];
+        return result.toUpperCase();
+      }
     }
   }
-  // return result[0];
+  return '';
 };
 
 console.log(firstNonRepeatingLetter('stress')); // 't'
