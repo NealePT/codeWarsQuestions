@@ -15,9 +15,9 @@
 // "[({})](]" =>  False
 
 const validBraces = (braces) => {
-  let opening = [ '(', '[', '{']
-  let closing = [ ')', ']', '}']
-  let arr = []
+  let opening = [ '(', '[', '{'];
+  let closing = [ ')', ']', '}'];
+  let arr = [];
   //console.log(closing.indexOf(braces[")"]) === opening.indexOf(arr[")"]))
   for (let i = 0; i < braces.length; i++) {
     if (opening.includes(braces[i])) {
@@ -25,7 +25,7 @@ const validBraces = (braces) => {
     } else
     if (closing.indexOf(braces[i]) === opening.indexOf(arr[arr.length - 1])) {
       arr.pop();
-    } else return false
+    } else return false;
   } return arr.length === 0;
 };
 
