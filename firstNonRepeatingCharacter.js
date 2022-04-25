@@ -8,7 +8,7 @@
 
 const firstNonRepeatingLetter = (string) => {
   const array = [];
-  let result = [];
+  // let result = [];
   for (let i = 0; i < string.length; i++) {
     array.push(string[i]);
   }
@@ -18,11 +18,14 @@ const firstNonRepeatingLetter = (string) => {
     // console.log(newArr);
     if (!newArr.includes(array[x])) {
       // console.log(array[x]);
-      result.push(array[x]);
+      // result.push(array[x]);
+      return array[x];
     }
   }
-  return result[0];
+  // return result[0];
 };
 
 console.log(firstNonRepeatingLetter('stress')); // 't'
 console.log(firstNonRepeatingLetter('moonmen')); // 'e'
+console.log(firstNonRepeatingLetter('a')); // 'a'
+console.log(firstNonRepeatingLetter('mmmmm')); // ''
