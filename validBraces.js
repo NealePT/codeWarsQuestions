@@ -18,7 +18,6 @@ const validBraces = (braces) => {
   let opening = [ '(', '[', '{'];
   let closing = [ ')', ']', '}'];
   let arr = [];
-  //console.log(closing.indexOf(braces[")"]) === opening.indexOf(arr[")"]))
   for (let i = 0; i < braces.length; i++) {
     if (opening.includes(braces[i])) {
       arr.push(braces[i]);
