@@ -6,8 +6,27 @@
 // add("123", "321"); -> "444"
 // add("11", "99");   -> "110"
 
-const add = (a, b) => {
-  return ((Number(a) + Number(b)).toString());
+const add = (A, B) => {
+  const AL = A.length;
+  const BL = B.length;
+  const ML = Math.max(AL, BL);
+
+  let carry = 0, sum = '';
+
+  for (let i = 1; i <= ML; i++) {
+    let a = +A.charAt(AL - i);
+    let b = +B.charAt(BL - i);
+
+    let t = carry + a + b;
+    carry = t / 10 | 0;
+    t %= 10;
+
+    sum = (i === ML && carry)
+      ? carry * 10 + t + sum
+      : t + sum;
+  }
+
+  return sum;
 };
 
 console.log(add("123", "321")); // "444"
