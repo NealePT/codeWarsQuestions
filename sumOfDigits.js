@@ -8,5 +8,15 @@
 
 
 const digital_root = (number) => {
-  
+  let sum = 0;
+  let digits = number.toString().split('');
+  let realDigits = digits.map(Number);
+  // console.log(realDigits);
+  for (let i = 0; i < realDigits.length; i++) {
+    sum = sum + realDigits[i];
+  }
+  return sum;
 };
+
+console.log(digital_root(16)); // 7
+// console.log(digital_root(942)); // 6
