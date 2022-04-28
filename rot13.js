@@ -3,11 +3,12 @@
 // Create a function that takes a string and returns the string ciphered with Rot13. If there are numbers or special characters included in the string, they should be returned as they are. Only letters from the latin/english alphabet should be shifted, like in the original Rot13 "implementation".
 
 const rot13 = (message) => {
+  let splitMessage = message.split('');
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   const upperAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   let result = [];
-  for (let i = 0; i < message.length; i++) {
-    let letter = message[i];
+  for (let i = 0; i < splitMessage.length; i++) {
+    let letter = splitMessage[i];
     for (let j = 0; j < alphabet.length; j++) {
       if (letter === alphabet[j]) {
         let movedNum = j + 13;
@@ -31,5 +32,4 @@ const rot13 = (message) => {
   return result.join('');
 };
 
-console.log(rot13("Test")); // Grfg
-console.log(rot13("Ruby is cool!")); // Ehol vf pbby!
+console.log(rot13("Test")); // Grfg\
