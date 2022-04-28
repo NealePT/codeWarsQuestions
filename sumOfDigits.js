@@ -15,8 +15,14 @@ const digital_root = (number) => {
   for (let i = 0; i < realDigits.length; i++) {
     sum = sum + realDigits[i];
   }
+  // console.log(sum.toString().split(''));
+  if (sum.toString().split('').length > 1) {
+    return digital_root(sum);
+  }
   return sum;
 };
 
 console.log(digital_root(16)); // 7
-// console.log(digital_root(942)); // 6
+console.log(digital_root(942)); // 6
+console.log(digital_root(132189)); // 6
+console.log(digital_root(493193)); // 2
