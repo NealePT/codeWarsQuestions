@@ -4,6 +4,7 @@
 
 const rot13 = (message) => {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  const upperAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   let result = [];
   for (let i = 0; i < message.length; i++) {
     let letter = message[i];
@@ -16,10 +17,19 @@ const rot13 = (message) => {
         } else {
           result.push(alphabet[movedNum]);
         }
+      } else if (letter === upperAlphabet[j]) {
+        let movedNum = j + 13;
+        if (movedNum > 25) {
+          movedNum = movedNum - 26;
+          result.push(upperAlphabet[movedNum]);
+        } else {
+          result.push(upperAlphabet[movedNum]);
+        }
       }
     }
   }
   return result.join('');
 };
 
-console.log(rot13("test")); // grfg
+console.log(rot13("Test")); // Grfg
+console.log(rot13("Ruby is cool!")); // Ehol vf pbby!
