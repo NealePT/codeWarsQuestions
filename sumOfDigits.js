@@ -11,11 +11,9 @@ const digital_root = (number) => {
   let sum = 0;
   let digits = number.toString().split('');
   let realDigits = digits.map(Number);
-  // console.log(realDigits);
   for (let i = 0; i < realDigits.length; i++) {
     sum = sum + realDigits[i];
   }
-  // console.log(sum.toString().split(''));
   if (sum.toString().split('').length > 1) {
     return digital_root(sum);
   }
