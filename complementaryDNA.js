@@ -13,5 +13,22 @@
 
 
 const DNAStrand = (dna) => {
-
+  let array = [];
+  for (let i = 0; i < dna.length; i++) {
+    if (dna[i] === "A") {
+      array.push("T");
+    }
+    else if (dna[i] === "T") {
+      array.push("A");
+    }
+    else if (dna[i] === "C") {
+      array.push("G");
+    }
+    else if (dna[i] === "G") {
+      array.push("C");
+    }
+  }
+  return array.join('');
 };
+
+console.log(DNAStrand("ATTGC")); // "TAACG"
