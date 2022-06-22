@@ -12,6 +12,8 @@
 // "-7" --> -7
 
 const stringToNumber = (str) => {
-
-  return null;
+  let result = Number(str);
+  return result;
 };
+
+console.log(stringToNumber("1234")); // 1234
