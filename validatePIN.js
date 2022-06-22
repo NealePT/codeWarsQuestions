@@ -8,5 +8,8 @@
 // "a234"   -->  false
 
 const validatePIN = (pin) => {
-
+  return /^(\d{4}|\d{6})$/.test(pin);
 };
+
+console.log(validatePIN("1234")); // true
+console.log(validatePIN("a234")); // false
