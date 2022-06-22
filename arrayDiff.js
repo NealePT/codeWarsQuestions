@@ -9,16 +9,16 @@
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 const arrayDiff = (a, b) => {
-  // console.log(a, b);
   let result = [];
   for (let i = 0; i < a.length; i++) {
-    // console.log(a[i]);
-    // console.log(b)
-    if (a[i] !== b[0]) {
-      result.push(a[i]);
+    let contains = false;
+    for (let j = 0; j < b.length; j++) {
+      if (a[i] === b[j]) contains = true;
     }
+    if (!contains) result.push(a[i]);
   }
   return result;
 };
 
-// console.log(arrayDiff([1,2,2,2,3],[2])); // [2]
+console.log(arrayDiff([1,2,2,2,3],[2])); // [2]
+console.log(arrayDiff([1,2,3],[1,2])); // [3]
