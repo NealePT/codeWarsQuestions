@@ -6,7 +6,15 @@
 
 
 const getCount = (string) => {
-
+  let count = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let letter of string) {
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  }
+  return count;
 };
 
 console.log(getCount("abracadabra")); //5
+console.log(getCount("neale")); //3
