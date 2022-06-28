@@ -7,8 +7,15 @@
 // "moOse" --> false (ignore letter case)
 
 const isIsogram = (string) => {
-
+  let array = [];
+  for (let letter of string.toLowerCase()) {
+    if (array.includes(letter)) {
+      return false;
+    }
+    array.push(letter);
+  }
+  return true;
 };
 
-console.log(isIsogram("Dermatoglyphics")) // true
-// console.log(isIsogram("aba")) // false
+console.log(isIsogram("DermatoglYphics")); // true
+console.log(isIsogram("aba")); // false
