@@ -6,6 +6,9 @@
 // "aba" --> false
 // "moOse" --> false (ignore letter case)
 
-const isIsogram(string) {
-  
-}
+const isIsogram = (string) => {
+
+};
+
+console.log(isIsogram("Dermatoglyphics")) // true
+// console.log(isIsogram("aba")) // false
