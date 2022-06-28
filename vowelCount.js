@@ -8,3 +8,5 @@
 const getCount = (string) => {
 
 };
+
+console.log(getCount("abracadabra")); //5
