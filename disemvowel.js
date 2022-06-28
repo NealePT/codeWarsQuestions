@@ -10,7 +10,13 @@
 
 
 const disemvowel = (string) => {
-
+  let newStr = "",
+    i;
+  for (i = 0; i < string.length; i++) {
+    if ("aeiou".includes(string[i].toLowerCase())) continue;
+    newStr += string[i];
+  }
+  return newStr;
 };
 
 console.log(disemvowel("This website is for losers LOL!")); // Ths wbst s fr lsrs LL!
