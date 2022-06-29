@@ -12,6 +12,8 @@
 
 // Note: In COBOL, it should return "found the needle at position 6"
 
-const findNeedle = () => {
+const findNeedle = (haystack) => {
   
 };
+
+console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])); // Found the needle at position 5
