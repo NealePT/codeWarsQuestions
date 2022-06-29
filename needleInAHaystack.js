@@ -21,4 +21,10 @@ const findNeedle = (haystack) => {
   }
 };
 
-console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])); // found the needle at position 5
+// Alternate solution:
+const findNeedleAlt = (haystack) => {
+  return "found the needle at position " + haystack.indexOf("needle");
+};
+
+
+console.log(findNeedleAlt(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"])); // found the needle at position 5
