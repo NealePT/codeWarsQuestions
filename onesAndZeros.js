@@ -17,7 +17,7 @@
 
 
 const binaryArrayToNumber = (array) => {
-
+  return parseInt(array.join(''),2);
 };
 
 console.log(binaryArrayToNumber([0,0,0,1])); // 1
