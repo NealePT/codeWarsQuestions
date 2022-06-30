@@ -5,5 +5,8 @@
 // "double  spaces"      ==> "elbuod  secaps"
 
 const reverseWords = (string) => {
-  
+
 };
+
+console.log(reverseWords("double spaces")); // "elbuod  secaps"
+console.log(reverseWords("This is an example!")); // "sihT si na !elpmaxe"
