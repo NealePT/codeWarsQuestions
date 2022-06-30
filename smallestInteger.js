@@ -9,7 +9,13 @@
 
 
 const findSmallestInt = (array) => {
-
+  let result;
+  for (let i = 0; i < array.length; i++) {
+    if (!result || array[i] < result) {
+      result = array[i];
+    }
+  }
+  return result;
 };
 
 console.log(findSmallestInt([34, 15, 88, 2])); // 2
