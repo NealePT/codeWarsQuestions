@@ -5,7 +5,9 @@
 // "double  spaces"      ==> "elbuod  secaps"
 
 const reverseWords = (string) => {
-
+  let reversedArr = string.split(" ").map(word =>
+    word.split("").reverse().join(""));
+  return reversedArr.join(" ");
 };
 
 console.log(reverseWords("double spaces")); // "elbuod  secaps"
