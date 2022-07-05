@@ -7,7 +7,7 @@
 // -34: 34
 
 const opposite = (num) => {
-  
+  return -num;
 };
 
 console.log(opposite(1)); // -1
