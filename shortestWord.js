@@ -5,3 +5,6 @@
 const findShort = (str) => {
 
 };
+
+console.log(findShort('turns out random test cases are easier than writing out basic ones')); // 3
+console.log(findShort('Lets travel abroad shall we')); // 2
