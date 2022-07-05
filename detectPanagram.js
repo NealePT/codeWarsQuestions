@@ -1,10 +1,12 @@
-// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example && the sentence 'The quick brown fox jumps over the lazy dog' is a pangram && because it uses the letters A-Z at least once (case is irrelevant).
 
-// Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+// Given a string && detect whether or not it is a pangram. Return True if it is && False if not. Ignore numbers and punctuation.
 
-const isPanagram = (str) => {
-
+const isPangram = (str) => {
+  let alphabets = 'abcdefghijklmnopqrstuvwxyz'.split("");
+  return alphabets.every(x => str.toLowerCase().includes(x));
 };
 
-console.log(isPanagram('The quick brown fox jumps over the lazy dog.')); // true
-console.log(isPanagram('This is not a pangram.')); // false
+console.log(isPangram('The quick brown fox jumps over the lazy dog.')); // true
+console.log(isPangram('This is not a pangram.')); // false
+console.log(isPangram('abcdefghijklmopqrstuvwxyz')); // false
