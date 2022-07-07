@@ -23,3 +23,6 @@
 const countSmileys = (arr) => {
   
 };
+
+console.log(countSmileys([':D',':~)',';~D',':)'])); //4
+console.log(countSmileys([':)',':(',':D',':O',':;'])); //2
