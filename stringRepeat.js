@@ -7,3 +7,6 @@
 const repeatStr = (n, s) => {
 
 };
+
+console.log(repeatStr(6, "I")); // "IIIIII"
+console.log(repeatStr(4, "Hello")); // "HelloHelloHelloHello"
