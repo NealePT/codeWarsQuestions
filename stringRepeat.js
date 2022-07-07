@@ -4,12 +4,16 @@
 // 6, "I"     -> "IIIIII"
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
+// const repeatStr = (n, s) => {
+//   let array = [];
+//   for (let i = 0; i < n; i++) {
+//     array.push(s);
+//   }
+//   return array.join("");
+// };
+
 const repeatStr = (n, s) => {
-  let array = [];
-  for (let i = 0; i < n; i++) {
-    array.push(s);
-  }
-  return array.join("");
+  return s.repeat(n);
 };
 
 console.log(repeatStr(6, "I")); // "IIIIII"
