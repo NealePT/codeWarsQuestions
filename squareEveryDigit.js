@@ -7,3 +7,6 @@
 const squareDigit = (num) => {
 
 };
+
+console.log(squareDigit(9119)); //811181
+console.log(squareDigit(3212)); //9414
