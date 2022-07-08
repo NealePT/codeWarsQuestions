@@ -4,9 +4,14 @@
 
 // Note: The function accepts an integer and returns an integer
 
-const squareDigit = (num) => {
-
+const squareDigits = (num) => {
+  let result = [];
+  let digits = num.toString().split('');
+  for (let i = 0; i < digits.length; i++) {
+    result.push(digits[i] * digits[i]);
+  }
+  return Number(result.join(''));
 };
 
-console.log(squareDigit(9119)); //811181
-console.log(squareDigit(3212)); //9414
+console.log(squareDigits(9119)); //811181
+console.log(squareDigits(3212)); //9414
