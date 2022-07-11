@@ -5,7 +5,7 @@
 // Note: if there is nothing to sum, the sum is default to 0.
 
 const positiveSum = (arr) => {
-
+  
 };
 
 console.log(positiveSum([1, 2, 3, 4, 5])); // 15
