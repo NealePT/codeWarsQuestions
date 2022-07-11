@@ -3,7 +3,11 @@
 // For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 
 const squareSum = (array) => {
-
+  let result = 0;
+  for (let number of array) {
+    result += (number * number);
+  }
+  return result;
 };
 
 console.log(squareSum([1, 2, 2])); // 9
