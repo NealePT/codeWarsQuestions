@@ -11,3 +11,9 @@
 const getGrade = (s1, s2, s3) => {
 
 };
+
+console.log(getGrade(100,85,96)); // 'A'
+console.log(getGrade(84,79,85)); // 'B'
+console.log(getGrade(60,82,76)); // 'C'
+console.log(getGrade(65,70,59)); // 'D'
+console.log(getGrade(44,55,52)); // 'F'
