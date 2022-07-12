@@ -8,7 +8,9 @@
 // The tests contain some very huge arrays, so think about performance.
 
 const findUnique = (arr) => {
-
+  return +arr.filter((value) => {
+    return arr.indexOf(value) === arr.lastIndexOf(value);
+  });
 };
 
 console.log(findUnique([1, 0, 0])); // 1
