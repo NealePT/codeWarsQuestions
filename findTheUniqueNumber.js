@@ -10,3 +10,7 @@
 const findUnique = (arr) => {
 
 };
+
+console.log(findUnique([1, 0, 0])); // 1
+console.log(findUnique([1, 1, 1, 2, 1, 1])); // 2
+console.log(findUnique([ 3, 10, 3, 3, 3 ])); // 10
