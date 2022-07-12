@@ -5,3 +5,7 @@
 const loveFunc = (flower1, flower2) => {
 
 };
+
+console.log(loveFunc(1, 4)); // true
+console.log(loveFunc(2, 2)); // false
+console.log(loveFunc(0, 1)); // true
