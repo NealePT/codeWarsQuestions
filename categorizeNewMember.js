@@ -13,8 +13,16 @@
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 const openOrSenior = (data) => {
-  
+  let result = [];
+  for (let person of data) {
+    if (person[0] > 54 && person[1] > 7) {
+      result.push("Senior");
+    } else {
+      result.push("Open");
+    }
+  }
+  return result;
 };
 
-console.log(openOrSenior([18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9])); // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+console.log(openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]])); // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]])); // ['Open', 'Open', 'Open', 'Open']
