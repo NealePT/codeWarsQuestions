@@ -3,9 +3,13 @@
 // Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
 const loveFunc = (flower1, flower2) => {
-
+  if ((flower1 % 2 === 0 && flower2 % 2 === 0) || (flower1 % 2 !== 0 && flower2 % 2 !== 0)) {
+    return false;
+  }
+  return true;
 };
 
 console.log(loveFunc(1, 4)); // true
 console.log(loveFunc(2, 2)); // false
 console.log(loveFunc(0, 1)); // true
+console.log(loveFunc(735, 477)); // false
