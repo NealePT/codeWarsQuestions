@@ -15,3 +15,6 @@
 const openOrSenior = (data) => {
   
 };
+
+console.log(openOrSenior([18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9])); // ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+console.log(openOrSenior([[3, 12],[55,1],[91, -2],[53, 23]])); // ['Open', 'Open', 'Open', 'Open']
