@@ -11,8 +11,13 @@
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
 const number = (busStops) => {
-
+  let result = 0;
+  for (let stop of busStops) {
+    result += stop[0];
+    result -= stop[1];
+  }
+  return result;
 };
 
-console.log([[10,0],[3,5],[5,8]]); // 10
-console.log([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]); // 17
+console.log(number([[10,0],[3,5],[5,8]])); // 5
+console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]])); // 17
