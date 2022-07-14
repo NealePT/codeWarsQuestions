@@ -11,5 +11,22 @@
 // (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 
 const getSum = (a, b) => {
-  
+  let sum = 0;
+  let low = 0;
+  let high = 0;
+  if (a > b) {
+    low = b;
+    high = a;
+  } else {
+    low = a;
+    high = b;
+  }
+  for (let i = low; i <= high; i++) {
+    sum += i;
+  }
+  return sum;
 };
+
+console.log(getSum(1, 0)); // 1;
+console.log(getSum(1, 2)); // 3;
+console.log(getSum(-1, 2)); // 2;
