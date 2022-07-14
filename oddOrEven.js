@@ -17,7 +17,14 @@
 // Output: "even"
 
 const oddOrEven = (array) => {
-
+  let sum = 0;
+  for (let number of array) {
+    sum += number;
+  }
+  if (sum % 2 === 0) {
+    return "even";
+  }
+  return "odd";
 };
 
 console.log(oddOrEven([0, -1, -5])); // "even"
