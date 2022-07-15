@@ -11,3 +11,9 @@
 const XO = (str) => {
 
 };
+
+console.log(XO("ooxx")); // true
+console.log(XO("xooxx")); // false
+console.log(XO("ooxXm")); // true
+console.log(XO("zpzpzpp")); // true
+console.log(XO("zzoo")); // false
