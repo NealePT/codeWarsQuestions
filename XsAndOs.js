@@ -9,7 +9,16 @@
 // XO("zzoo") => false
 
 const XO = (str) => {
-
+  let xCount = 0;
+  let oCount = 0;
+  for (let letter of str.toLowerCase()) {
+    if (letter === "x") {
+      xCount++;
+    } else if (letter === "o") {
+      oCount++;
+    }
+  }
+  return (xCount === oCount ? true : false);
 };
 
 console.log(XO("ooxx")); // true
