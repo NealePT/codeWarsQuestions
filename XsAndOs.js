@@ -21,6 +21,7 @@ const XO = (str) => {
   return (xCount === oCount ? true : false);
 };
 
+
 console.log(XO("ooxx")); // true
 console.log(XO("xooxx")); // false
 console.log(XO("ooxXm")); // true
