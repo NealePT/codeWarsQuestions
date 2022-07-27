@@ -22,6 +22,7 @@ const XO = (str) => {
 };
 
 
+
 console.log(XO("ooxx")); // true
 console.log(XO("xooxx")); // false
 console.log(XO("ooxXm")); // true
