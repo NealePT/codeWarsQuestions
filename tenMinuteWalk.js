@@ -5,3 +5,7 @@
 const isValid = (walk) => {
 
 };
+
+console.log(isValid(['n','s','n','s','n','s','n','s','n','s'])); // true
+console.log(isValid(['w','e','w','e','w','e','w','e','w','e','w','e'])); // false
+console.log(isValid(['n','n','n','s','n','s','n','s','n','s'])); // false
