@@ -12,9 +12,21 @@
 //     Output string must be two numbers separated by a single space, and highest number is first.
 
 const highAndLow = (numbers) => {
-
+  let max;
+  let min;
+  let numberArray = numbers.split(" ");
+  for (let i = 0; i < numberArray.length; i++) {
+    let num = Number(numberArray[i]);
+    if (!max || max < num) {
+      max = num;
+    }
+    if (!min || min > num) {
+      min = num;
+    }
+  }
+  return `${max} ${min}`;
 };
 
-console.log(highAndLow(1 2 3 4 5)); // "5 1"
-console.log(highAndLow(1 2 -3 4 5)); // "5 -3"
-console.log(highAndLow(1 9 3 4 -5)); // "9 -5"
+console.log(highAndLow("1 2 3 4 5")); // "5 1"
+console.log(highAndLow("1 2 -3 4 5")); // "5 -3"
+console.log(highAndLow("1 9 3 4 -5")); // "9 -5"
