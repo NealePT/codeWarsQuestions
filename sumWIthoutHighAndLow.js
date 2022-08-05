@@ -12,17 +12,6 @@
 
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
-// const sumArray = (array) => {
-//   let sum = 0;
-//   let min = Math.min(...array);
-//   let max = Math.max(...array);
-//   for (let num of array) {
-//     if (num !== min && num !== max) {
-//       sum += num;
-//     }
-//   }
-//   return sum;
-// };
 
 const sumArray = (array) => {
   if (array === null || array === undefined || array === []) {
