@@ -21,3 +21,6 @@
 const getMiddle = (string) => {
 
 };
+
+console.log(getMiddle("test")); // "es"
+console.log(getMiddle("testing")); // "t"
