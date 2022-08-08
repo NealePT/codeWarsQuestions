@@ -3,7 +3,7 @@
 
 // The function takes a name as its only argument, and returns one of the following strings:
 
-// name + " plays banjo" 
+// name + " plays banjo"
 // name + " does not play banjo"
 
 // Names given are always valid strings.
@@ -11,3 +11,6 @@
 const areYouPlayingBanjo = (name) => {
 
 };
+
+console.log(areYouPlayingBanjo("Ryan")); // Ryan plays banjo
+console.log(areYouPlayingBanjo("Jeff")); // Jeff does not play banjo
