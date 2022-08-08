@@ -18,8 +18,8 @@
 
 // The middle character(s) of the word represented as a string.
 
-const getMiddle = (string) => {
-
+const getMiddle = (s) => {
+  return s.slice((s.length - 1) / 2, s.length / 2 + 1);
 };
 
 console.log(getMiddle("test")); // "es"
