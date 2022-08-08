@@ -11,3 +11,7 @@
 const rps = (p1, p2) => {
 
 };
+
+console.log(rps("scissors", "rock")); // "Player 2 won!"
+console.log(rps("rock", "rock")); // "Draw!"
+console.log(rps("scissors", "peper")); // "Player 1 won!"
