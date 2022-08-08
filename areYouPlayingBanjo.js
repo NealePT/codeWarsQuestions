@@ -9,7 +9,7 @@
 // Names given are always valid strings.
 
 const areYouPlayingBanjo = (name) => {
-
+  return (name.toLowerCase()[0] === "r" ? `${name} plays banjo` : `${name} does not play banjo`);
 };
 
 console.log(areYouPlayingBanjo("Ryan")); // Ryan plays banjo
