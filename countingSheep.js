@@ -16,3 +16,10 @@
 const countingSheep = (array) => {
 
 };
+
+console.log(countingSheep([true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true ])); // 17
