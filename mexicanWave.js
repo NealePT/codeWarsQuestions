@@ -1,6 +1,6 @@
 // Task
 
-// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up. 
+// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
 
 // Rules
 
@@ -14,6 +14,14 @@
 
 // Good luck and enjoy!
 
-const wave = (string) => {
-
+const wave = (str) => {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    let newWord = str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1, str.length);
+    result.push(newWord);
+  }
+  return result;
 };
+
+console.log(wave("hello")); // ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+console.log(wave("codewars")); // ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
