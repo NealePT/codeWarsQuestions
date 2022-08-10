@@ -14,7 +14,13 @@
 // Hint: Don't forget to check for bad values like null/undefined
 
 const countingSheep = (array) => {
-
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === true) {
+      result++;
+    }
+  }
+  return result;
 };
 
 console.log(countingSheep([true,  true,  true,  false,
