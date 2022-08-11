@@ -5,5 +5,8 @@
 // Note: only positive integers will be tested.
 
 const otherAngle = (a, b) => {
-
+  
 };
+
+console.log(otherAngle(30, 60)); // 90
+console.log(otherAngle(60, 60)); // 60
