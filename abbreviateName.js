@@ -9,7 +9,8 @@
 // patrick feeney => P.F
 
 const abbrevName = (name) => {
-
+  const newArray = name.split(" ")
+  return (newArray[0][0] + "." + newArray[1][0]).toUpperCase();
 };
 
 console.log(abbrevName("Sam Harris")); // S.H
