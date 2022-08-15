@@ -11,3 +11,6 @@
 const abbrevName = (name) => {
 
 };
+
+console.log(abbrevName("Sam Harris")); // S.H
+console.log(abbrevName("patrick feeney")); // P.F.
