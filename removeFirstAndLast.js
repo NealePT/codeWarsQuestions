@@ -3,3 +3,6 @@
 const removeChar = (str) => {
 
 };
+
+console.log(removeChar("eloquent")); // loquent
+console.log(removeChar("neale")); // eal
