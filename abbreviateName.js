@@ -9,7 +9,7 @@
 // patrick feeney => P.F
 
 const abbrevName = (name) => {
-  const newArray = name.split(" ")
+  const newArray = name.split(" ");
   return (newArray[0][0] + "." + newArray[1][0]).toUpperCase();
 };
 
