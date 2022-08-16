@@ -18,7 +18,8 @@
 // Attention: If the number has leading zeros the amount of digits should be considered.
 
 const incrementString = (string) => {
-
+  let count = string.match(/\d*$/);
+  return string.substr(0, count.index) + (++count[0]);
 };
 
 console.log(incrementString("foo")); // "foo1"
