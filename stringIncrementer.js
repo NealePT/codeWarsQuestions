@@ -20,3 +20,9 @@
 const incrementString = (string) => {
 
 };
+
+console.log(incrementString("foo")); // "foo1"
+console.log(incrementString("foo23")); // "foo24"
+console.log(incrementString("foo0042")); // "foo0043"
+console.log(incrementString("foo9")); // "foo10"
+console.log(incrementString("foo099")); // "foo100"
