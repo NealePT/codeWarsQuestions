@@ -10,7 +10,18 @@
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 
 const findOdd = (array) => {
-
+  let count = 0;
+  let sorted = array.sort((a, b) => a - b);
+  for (let i = 0; i < sorted.length; i++) {
+    for (let j = 0; j < sorted.length; j++) {
+      if (sorted[i] === sorted[j]) {
+        count++;
+      }
+    }
+    if (count % 2 !== 0) {
+      return sorted[i];
+    }
+  }
 };
 
 console.log(findOdd([7])); // 7;
