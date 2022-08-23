@@ -13,3 +13,6 @@
 const sortByLength = (array) => {
 
 };
+
+console.log(sortByLength(["Telescopes", "Glasses", "Eyes", "Monocles"])); // ["Eyes", "Glasses", "Monocles", "Telescopes"]
+console.log(sortByLength(["Beg", "Life", "I", "To"])); // ["I", "To", "Beg", "Life"]
