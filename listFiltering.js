@@ -5,14 +5,23 @@
 // filter_list([1,'a','b',0,15]) == [1,0,15]
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
+
+// WITHOUT FILTER FUNCTION
+// const filter_list = (list) => {
+//   let result = [];
+//   for (let i = 0; i < list.length; i++) {
+//     if (typeof list[i] === 'number') {
+//       result.push(list[i]);
+//     }
+//   }
+//   return result;
+// };
+
+// WITH FILTER FUNCTION
 const filter_list = (list) => {
-  let result = [];
-  for (let i = 0; i < list.length; i++) {
-    if (typeof list[i] === 'number') {
-      result.push(list[i]);
-    }
-  }
-  return result;
+  return list.filter(function(v) {
+    return typeof v === 'number';
+  });
 };
 
 console.log(filter_list([1,2,'a','b'])); // [1,2]
