@@ -9,7 +9,11 @@
 // The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
 
 const firstNonConsecutive = (array) => {
-
+  for (let i = 1; i < array.length; i++) {
+    if (array[i - 1] + 1 !== array[i]) return array[i];
+  }
+  return null;
 };
 
 console.log(firstNonConsecutive([1,2,3,4,6,7,8])); // 6;
+console.log(firstNonConsecutive([3,4,5,6,7,8,9,10,11,12])); // null;
