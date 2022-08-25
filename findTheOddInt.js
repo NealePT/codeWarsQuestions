@@ -24,6 +24,7 @@ const findOdd = (array) => {
   }
 };
 
+
 console.log(findOdd([7])); // 7;
 console.log(findOdd([1,1,2])); // 2;
 console.log(findOdd([0,1,0,1,0])); // 0;
