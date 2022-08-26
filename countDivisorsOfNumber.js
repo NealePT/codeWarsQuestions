@@ -9,7 +9,13 @@
 // 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
 
 const getDivisorsCnt = (num) => {
-
+  let result = 0;
+  for (let i = 1; i < num + 1; i++) {
+    if (num % i === 0) {
+      result++;
+    }
+  }
+  return result;
 };
 
 console.log(getDivisorsCnt(4)); // 3
