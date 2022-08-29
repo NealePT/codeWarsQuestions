@@ -21,7 +21,11 @@
 
 
 const isSquare = (n) => {
-
+  let squareRoot = Math.sqrt(n);
+  if (squareRoot % 1 === 0) {
+    return true;
+  }
+  return false;
 };
 
 console.log(isSquare(-1)); // false
