@@ -20,17 +20,17 @@
 // 26  =>  false
 
 
-// const isSquare = (n) => {
-//   let squareRoot = Math.sqrt(n);
-//   if (squareRoot % 1 === 0) {
-//     return true;
-//   }
-//   return false;
-// };
-
 const isSquare = (n) => {
-  return Number.isInteger(Math.sqrt(n));
+  let squareRoot = Math.sqrt(n);
+  if (squareRoot % 1 === 0) {
+    return true;
+  }
+  return false;
 };
+
+// const isSquare = (n) => {
+//   return Number.isInteger(Math.sqrt(n));
+// };
 
 console.log(isSquare(-1)); // false
 console.log(isSquare(0)); // true
