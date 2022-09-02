@@ -28,9 +28,11 @@ const isSquare = (n) => {
   return false;
 };
 
+
 // const isSquare = (n) => {
 //   return Number.isInteger(Math.sqrt(n));
 // };
+
 
 console.log(isSquare(-1)); // false
 console.log(isSquare(0)); // true
