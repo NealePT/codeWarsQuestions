@@ -5,16 +5,16 @@
 // solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
 // solution(null); // should return []
 
-// const solution = (nums) => {
-//   if (nums === null) {
-//     return [];
-//   }
-//   return nums.sort((a, b) => a - b);
-// };
-
 const solution = (nums) => {
-  return nums !== null ? nums.sort(function(a,b) { return a - b }) : [];
+  if (nums === null) {
+    return [];
+  }
+  return nums.sort((a, b) => a - b);
 };
+
+// const solution = (nums) => {
+//   return nums !== null ? nums.sort(function(a,b) { return a - b }) : [];
+// };
 
 console.log(solution([1, 2, 10, 50, 5])); // [1,2,5,10,50]
 console.log(solution(null)); // []
