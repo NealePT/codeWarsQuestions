@@ -12,7 +12,11 @@
 // 1,5,3  --> 5 (1 + 4)
 
 const sequenceSum = (begin, end, step) => {
-
+  let sum = 0;
+  for (let i = begin; i <= end; i = i + step) {
+    sum = sum + i;
+  }
+  return sum;
 };
 
 console.log(sequenceSum(2, 2, 2)); // 2
