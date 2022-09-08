@@ -8,3 +8,6 @@
 const cockroachSpeed = (s) => {
 
 };
+
+console.log(cockroachSpeed(1.08)); // 30
+console.log(cockroachSpeed(1.09)); // 30
