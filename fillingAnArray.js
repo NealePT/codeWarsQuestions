@@ -8,7 +8,11 @@
 // Note: The parameter is optional. So you have to give it a default value.
 
 const arr = (n) => {
-
+  let result = [];
+  for (let i = 0; i < n; i++) {
+    result.push(i);
+  }
+  return result;
 };
 
 console.log(arr(5)); // [0, 1, 2, 3, 4]
