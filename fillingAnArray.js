@@ -15,4 +15,5 @@ const arr = (n) => {
   return result;
 };
 
+
 console.log(arr(5)); // [0, 1, 2, 3, 4]
