@@ -9,8 +9,20 @@
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
 const stray = (numbers) => {
-
+  let arr1 = [];
+  let arr2 = [];
+  for (let number of numbers) {
+    if (arr1.length === 0) {
+      arr1.push(number);
+    } else if (arr1[0] === number) {
+      arr1.push(number);
+    } else {
+      arr2.push(number);
+    }
+  }
+  return (arr1.length === 1 ? Number(arr1) : Number(arr2));
 };
 
 console.log(stray([17, 17, 3, 17, 17, 17, 17])); // 3
 console.log(stray([1, 1, 2])); // 2
+console.log(stray([1, 2, 2])); // 1
