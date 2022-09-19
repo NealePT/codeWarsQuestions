@@ -5,7 +5,7 @@
 // Your function will be tested with pre-made examples as well as random ones.
 
 const findDifference = (a, b) => {
-
+  
 };
 
 console.log(findDifference([3, 2, 5], [1, 4, 4])); // 14
