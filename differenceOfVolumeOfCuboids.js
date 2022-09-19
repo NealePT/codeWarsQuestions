@@ -7,3 +7,7 @@
 const findDifference = (a, b) => {
 
 };
+
+console.log(findDifference([3, 2, 5], [1, 4, 4])); // 14
+console.log(findDifference([3, 2, 2], [1, 4, 5])); // 8
+console.log(findDifference([9, 7, 2], [5, 2, 2])); // 106
