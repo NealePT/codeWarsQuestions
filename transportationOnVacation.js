@@ -7,5 +7,10 @@
 // Write a code that gives out the total amount for different days(d).
 
 const rentalCarCost = (d) => {
-  
+
 };
+
+console.log(rentalCarCost(1)); // 40
+console.log(rentalCarCost(2)); // 80
+console.log(rentalCarCost(3)); // 100
+console.log(rentalCarCost(7)); // 230
