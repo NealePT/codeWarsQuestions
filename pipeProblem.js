@@ -13,5 +13,12 @@
 
 
 const pipeFix = (numbers) => {
-
+  let result = [];
+  for (let i = numbers[0]; i < (numbers[numbers.length - 1] + 1); i++) {
+    result.push(i);
+  }
+  return result;
 };
+
+console.log(pipeFix([1,3,5,6,7,8])); // [1,2,3,4,5,6,7,8]
+console.log(pipeFix([-1,4])); // [-1,0,1,2,3,4]
