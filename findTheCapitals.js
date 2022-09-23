@@ -3,3 +3,5 @@
 const capitals = (word) => {
 
 };
+
+console.log(capitals("CodEWaRs")); // [0,3,4,6]
