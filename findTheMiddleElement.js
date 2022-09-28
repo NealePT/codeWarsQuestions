@@ -13,7 +13,12 @@
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 const gimme = (array) => {
-
+  let sorted = [...array].sort((a, b) => a - b);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === sorted[1]) {
+      return i;
+    }
+  }
 };
 
 console.log(gimme([5, 10, 14])); // 1
