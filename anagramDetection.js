@@ -10,7 +10,18 @@
 // "Buckethead" is an anagram of "DeathCubeK"
 
 const isAnagram = (a, b) => {
-
+  let len1 = a.length;
+  let len2 = b.length;
+  if (len1 !== len2) {
+    return false;
+  }
+  let str1 = a.toUpperCase().split('').sort().join('');
+  let str2 = b.toUpperCase().split('').sort().join('');
+  if (str1 === str2) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 console.log(isAnagram("foefet", "toffee")); // true
