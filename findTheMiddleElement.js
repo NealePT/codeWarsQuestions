@@ -15,3 +15,6 @@
 const gimme = (array) => {
 
 };
+
+console.log(gimme([5, 10, 14])); // 1
+console.log(gimme([2, 3, 1])); // 0
