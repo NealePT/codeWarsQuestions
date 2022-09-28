@@ -9,6 +9,10 @@
 
 // "Buckethead" is an anagram of "DeathCubeK"
 
-const isAnagram = (test, original) => {
+const isAnagram = (a, b) => {
 
 };
+
+console.log(isAnagram("foefet", "toffee")); // true
+console.log(isAnagram("Buckethead", "DeathCubeK")); // true
+console.log(isAnagram("NealeTaylor", "neaeTAYlor")); // false
