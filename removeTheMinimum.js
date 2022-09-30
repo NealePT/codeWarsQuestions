@@ -8,7 +8,15 @@
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
 const removeSmallest = (numbers) => {
-
+  let smallest = 0;
+  let copy = numbers.slice();
+  for (let i = 0; i < copy.length; i++) {
+    if (!smallest || copy[i] < smallest) {
+      smallest = copy[i];
+    }
+  }
+  copy.splice(copy.indexOf(smallest), 1);
+  return copy;
 };
 
 console.log(removeSmallest([1,2,3,4,5])); // [2,3,4,5]
