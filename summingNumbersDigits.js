@@ -8,7 +8,14 @@
 // Let's assume that all numbers in the input will be integer values.
 
 const sumDigits = (n) => {
-
+  let result = 0;
+  if (n < 0) {
+    n = n * -1;
+  }
+  for (let number of n.toString()) {
+    result += Number(number);
+  }
+  return result;
 };
 
 console.log(sumDigits(10)); // 1
