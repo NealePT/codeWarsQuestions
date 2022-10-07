@@ -8,3 +8,6 @@
 const index = (array, n) => {
 
 };
+
+console.log(index([1, 2, 3, 4], 2)); // 9
+console.log(index([1, 2, 3], 3)); // -1
