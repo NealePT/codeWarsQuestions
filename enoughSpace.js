@@ -11,5 +11,8 @@
 // cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 const enough = (cap, on, wait) => {
-  
+
 };
+
+console.log(enough(10, 5, 5)); // 0
+console.log(enough(100, 60, 50)); // 10
