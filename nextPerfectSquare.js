@@ -11,7 +11,11 @@
 // 114 --> -1 since 114 is not a perfect square
 
 const findNextSquare = (n) => {
-
+  let sqRoot = Math.sqrt(n);
+  if (Math.sqrt(n) % 1 === 0) {
+    return (sqRoot + 1) * (sqRoot + 1);
+  }
+  return -1;
 };
 
 console.log(findNextSquare(121)); // 144
