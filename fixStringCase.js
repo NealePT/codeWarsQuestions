@@ -9,7 +9,22 @@
 // solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
 
 const solve = (s) => {
-
+  const uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowers = "abcdefghijklmnopqrstuvwxyz";
+  let upperCount = 0;
+  let lowerCount = 0;
+  for (let letter of s) {
+    if (uppers.includes(letter)) {
+      upperCount += 1;
+    } else if (lowers.includes(letter)) {
+      lowerCount += 1;
+    }
+  }
+  if (upperCount > lowerCount) {
+    return s.toUpperCase();
+  } else {
+    return s.toLowerCase();
+  }
 };
 
 console.log(solve("coDe")); // "code"
