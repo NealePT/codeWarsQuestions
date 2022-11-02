@@ -11,3 +11,7 @@
 const solve = (s) => {
 
 };
+
+console.log(solve("coDe")); // "code"
+console.log(solve("CODe")); // "CODE"
+console.log(solve("coDE")); // "code"
