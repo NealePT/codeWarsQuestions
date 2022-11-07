@@ -8,3 +8,6 @@
 const solution = (str, ending) => {
 
 };
+
+console.log(solution('abc', 'bc')); // true
+console.log(solution('abc', 'd')); // false
