@@ -6,8 +6,9 @@
 // solution('abc', 'd') // returns false
 
 const solution = (str, ending) => {
-
+  return str.endsWith(ending);
 };
 
 console.log(solution('abc', 'bc')); // true
 console.log(solution('abc', 'd')); // false
+console.log(solution('samurai', 'ai')); // true
