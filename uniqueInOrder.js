@@ -7,7 +7,13 @@
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 const uniqueInOrder = (s) => {
-
+  let result = [];
+  for (let i = 0; i < s.length; i++) {
+    if (result[result.length - 1] !== s[i]) {
+      result.push(s[i]);
+    }
+  }
+  return result;
 };
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
