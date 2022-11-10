@@ -16,5 +16,8 @@
 // printer_error(s) => "8/22"
 
 const printerError = (s) => {
-
+  
 };
+
+console.log(printerError('aaabbbbhaijjjm')); // printer_error(s) => "0/14"
+console.log(printerError('aaaxbbbbyyhwawiwjjjwwm')); // printer_error(s) => "8/22"
