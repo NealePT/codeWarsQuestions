@@ -16,7 +16,14 @@
 // printer_error(s) => "8/22"
 
 const printerError = (s) => {
-  
+  let err = 0;
+  let colors = 'abcdefghijklm';
+  for (let i = 0; i < s.length; i++) {
+    if (!colors.includes(s[i])) {
+      err++;
+    }
+  }
+  return `${err}/${s.length}`;
 };
 
 console.log(printerError('aaabbbbhaijjjm')); // printer_error(s) => "0/14"
