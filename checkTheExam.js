@@ -11,8 +11,18 @@
 // checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
 // checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
 
-const checkExam = (arr) => {
-
+const checkExam = (arr1, arr2) => {
+  let result = 0;
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] === arr2[i]) {
+      result += 4;
+    } else if (arr1[i] === "" || arr2[i] === "") {
+      result += 0;
+    } else {
+      result--;
+    }
+  }
+  return (result > 0 ? result : 0);
 };
 
 console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"])); // 6
