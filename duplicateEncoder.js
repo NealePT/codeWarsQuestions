@@ -9,7 +9,14 @@
 // Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 
 const duplicateEncoder = (word) => {
-
+  let letterCount = {};
+  let letters = word.toLowerCase().split("");
+  letters.forEach(function(letter) {
+    letterCount[letter] = (letterCount[letter] || 0) + 1;
+  });
+  return letters.map(function(letter) {
+    return letterCount[letter] === 1 ? "(" : ")";
+  }).join("");
 };
 
 console.log(duplicateEncoder("din")); // "((("
