@@ -12,9 +12,12 @@
 // "(CORWILL, ALFRED)(CORWILL, FRED)(CORWILL, RAPHAEL)(CORWILL, WILFRED)(TORNBULL, BARNEY)(TORNBULL, BETTY)(TORNBULL, BJON)"
 // It can happen that in two distinct families with the same family name two people have the same first name too.
 
-
 const meeting = (s) => {
-
+  return s.toUpperCase().split(';').map((str) => {
+    return str.split(':').reverse();
+  }).sort().map((arr) => {
+    return "(" + arr.join(', ') + ")";
+  }).join('');
 };
 
 console.log(meeting("Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill")); // "(CORWILL, ALFRED)(CORWILL, FRED)(CORWILL, RAPHAEL)(CORWILL, WILFRED)(TORNBULL, BARNEY)(TORNBULL, BETTY)(TORNBULL, BJON)"
