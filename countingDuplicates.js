@@ -10,7 +10,19 @@
 // "ABBA" -> 2 # 'A' and 'B' each occur twice
 
 const duplicateCount = (string) => {
-
+  let result = 0,
+    soltingObject = {};
+  string.toLowerCase().split('').map(str => {
+    if (!soltingObject.hasOwnProperty(str)) {
+      soltingObject[str] = 0;
+    } else {
+      if (soltingObject[str] === 0) {
+        result += 1;
+      }
+      soltingObject[str] = soltingObject[str] + 1;
+    }
+  });
+  return result;
 };
 
 console.log(duplicateCount("abcde")); // 0
