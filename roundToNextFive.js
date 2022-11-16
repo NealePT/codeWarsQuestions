@@ -17,7 +17,10 @@
 // You can assume that all inputs are valid integers.
 
 const roundToNext5 = (n) => {
-
+  if (n % 5 === 0) {
+    return n;
+  }
+  return roundToNext5(n + 1);
 };
 
 console.log(roundToNext5(0)); // 0
