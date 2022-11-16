@@ -10,3 +10,6 @@
 const addBinary = (a, b) => {
 
 };
+
+console.log(addBinary(1, 1)); // 10
+console.log(addBinary(5, 9)); // 1110
