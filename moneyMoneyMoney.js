@@ -25,7 +25,10 @@
 // Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
 const calculateYears = (principal, interest, tax, desired) => {
-
+  for (var years = 0; principal < desired; years++) {
+    principal += principal * interest * (1 - tax);
+  }
+  return years;
 };
 
 console.log(calculateYears(1000, 0.05, 0.18, 1100)); // 3
