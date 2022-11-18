@@ -17,7 +17,13 @@
 // (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
 
 const minValue = (values) => {
-
+  let array = [];
+  for (let i = 0; i < values.length; i++) {
+    if (!array.includes(values[i])) {
+      array.push(values[i]);
+    }
+  }
+  return Number(array.sort().join(""));
 };
 
 console.log(minValue([1, 3, 1])); // 13
