@@ -12,7 +12,12 @@
 // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
 const mergeArrays = (arr1, arr2) => {
-
+  for (let i = 0; i < arr2.length; i++) {
+    if (!arr1.includes(arr2[i])) {
+      arr1.push(arr2[i]);
+    }
+  }
+  return arr1.sort((a,b) => (a - b));
 };
 
 console.log(mergeArrays([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
