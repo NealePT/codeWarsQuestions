@@ -13,3 +13,7 @@
 let encryptThis = (string) => {
   
 };
+
+console.log(encryptThis("Hello")); // "72olle"
+console.log(encryptThis("good")); // "103doo"
+console.log(encryptThis("hello world")); // "104olle 119drlo"
