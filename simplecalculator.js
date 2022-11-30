@@ -12,7 +12,18 @@
 // calculator(1,"k","*"); //=> result will be "unknown value"
 
 const calculator = (a, b, sign) => {
-
+  if (typeof a === "number" && typeof b === "number") {
+    if (sign === "+") {
+      return a + b;
+    } else if (sign === "-") {
+      return a - b;
+    } else if (sign === "*") {
+      return a * b;
+    } else if (sign === "/") {
+      return a / b;
+    }
+  }
+  return "unknown value";
 };
 
 console.log(calculator(1,2,"+")); // 3
