@@ -12,3 +12,7 @@
 const rowWeights = (array) => {
 
 };
+
+console.log(rowWeights([13, 27, 49])); // (62, 27)
+console.log(rowWeights([50, 60, 70, 80])); // (120, 140)
+console.log(rowWeights([80, 0])); // (80, 0)
