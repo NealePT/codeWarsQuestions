@@ -10,7 +10,16 @@
 // All numbers will be positive.
 
 const rowWeights = (array) => {
-
+  let result1 = 0;
+  let result2 = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (i % 2 === 0) {
+      result1 += array[i];
+    } else {
+      result2 += array[i];
+    }
+  }
+  return [result1, result2];
 };
 
 console.log(rowWeights([13, 27, 49])); // (62, 27)
