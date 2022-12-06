@@ -9,7 +9,12 @@
 // Note: String will have at least one element; words will always be separated by a space.
 
 const addLength = (str) => {
-
+  let result = [];
+  let split = str.split(" ");
+  for (let i = 0; i < split.length; i++) {
+    result.push(`${split[i]} ${split[i].length}`);
+  }
+  return result;
 };
 
 console.log(addLength("apple ban")); // ["apple 5", "ban 3"]
