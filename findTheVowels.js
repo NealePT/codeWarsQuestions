@@ -14,3 +14,8 @@
 const vowelIndices = (word) => {
 
 };
+
+console.log(vowelIndices("Mmm")); // [];
+console.log(vowelIndices("Super")); // [2, 4];
+console.log(vowelIndices("Apple")); // [1, 5];
+console.log(vowelIndices("YoMama")); // [1, 2, 4, 6];
