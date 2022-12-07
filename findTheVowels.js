@@ -12,7 +12,15 @@
 // This is indexed from [1..n] (not zero indexed!)
 
 const vowelIndices = (word) => {
-
+  let result = [];
+  let vowels = "aeiouy";
+  word = word.toLowerCase();
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      result.push(i + 1);
+    }
+  }
+  return result;
 };
 
 console.log(vowelIndices("Mmm")); // [];
