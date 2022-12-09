@@ -12,7 +12,7 @@
 // abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
 
 // Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
-// The first that came is "folingtrashy" so 
+// The first that came is "folingtrashy" so
 // longest_consec(strarr, 2) should return "folingtrashy".
 
 // In the same way:
@@ -20,18 +20,16 @@
 // n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang).
 
 const longestConsec = (array, k) => {
-  let longest;
-  let result = [];
-  for (let i = 0; i < array.length; i++) {
-    if (i !== array.length - 1) {
-      if (!longest || array[i].length + array[i + 1].length > longest) {
-        result = [array[i], array[i + 1]];
-        longest = array[i].length + array[i + 1].length;
-      }
+  let longest = "";
+  for (let i = 0; k > 0 && i < array.length - k; i++) {
+    let tempArray = array.slice(i, i + k);
+    let tempString = tempArray.join("");
+    if (tempString.length > longest.length) {
+      longest = tempString;
     }
   }
-  return result.join("");
+  return longest;
 };
 
 console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], 2)); // "folingtrashy";
-// console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)); // "abigailtheta";
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)); // "abigailtheta";
