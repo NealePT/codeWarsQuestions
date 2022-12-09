@@ -22,3 +22,6 @@
 const longestConsec = (array, k) => {
 
 };
+
+console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], 2)); // "folingtrashy";
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)); // "abigailtheta";
