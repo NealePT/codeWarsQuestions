@@ -20,8 +20,18 @@
 // n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm, "nothing" in Erlang).
 
 const longestConsec = (array, k) => {
-
+  let longest;
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (i !== array.length - 1) {
+      if (!longest || array[i].length + array[i + 1].length > longest) {
+        result = [array[i], array[i + 1]];
+        longest = array[i].length + array[i + 1].length;
+      }
+    }
+  }
+  return result.join("");
 };
 
 console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], 2)); // "folingtrashy";
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)); // "abigailtheta";
+// console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2)); // "abigailtheta";
