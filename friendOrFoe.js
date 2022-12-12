@@ -12,3 +12,6 @@
 const friend = (friends) => {
 
 };
+
+console.log(friend(["Ryan", "Kieran", "Jason", "Yous"])); // ["Ryan", "Yous"]
+console.log(friend(["Ryan", "Kieran", "Mark"])); // ["Ryan", "Mark"]
