@@ -10,7 +10,13 @@
 // Note: keep the original order of the names in the output.
 
 const friend = (friends) => {
-
+  let result = [];
+  for (let i = 0; i < friends.length; i++) {
+    if (friends[i].length === 4) {
+      result.push(friends[i]);
+    }
+  }
+  return result;
 };
 
 console.log(friend(["Ryan", "Kieran", "Jason", "Yous"])); // ["Ryan", "Yous"]
