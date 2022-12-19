@@ -9,6 +9,7 @@
 // friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 // Note: keep the original order of the names in the output.
 
+
 const friend = (friends) => {
   let result = [];
   for (let i = 0; i < friends.length; i++) {
