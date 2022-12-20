@@ -5,3 +5,7 @@
 const count = (string) => {
 
 };
+
+console.log(count("abc")); // { a: 1, b: 1, c: 1 })
+console.log(count("aabbcc")); // { a: 2, b: 2, c: 2 })
+console.log(count("")); // {})
