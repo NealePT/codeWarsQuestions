@@ -15,6 +15,18 @@
 // Return
 // int: the absolute diagonal difference
 
-const diagonalDifference = () => {
-  
+const diagonalDifference = (arr) => {
+  let row = -1 , coll = -1, colr = arr.length;
+  let suml = 0, sumr = 0;
+  for (let i = 0; i < arr.length; i++) {
+    row++;
+    coll++;
+    colr --;
+    suml += arr[row][coll];
+    sumr += arr[row][colr];
+    
+  }
+  return Math.abs(suml - sumr);
 };
+
+console.log(diagonalDifference([[1,2,3],[4,5,6],[9,8,9]])); // 2
