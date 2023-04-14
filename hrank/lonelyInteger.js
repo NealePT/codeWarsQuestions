@@ -20,3 +20,14 @@
 // The second line contains n space-separated integers that describe the values in .
 
 
+const lonelyInteger = (a) => {
+  for (let i = 0; i < a.length; i++) {
+    let aCopy = [...a];
+    aCopy.splice(i, 1);
+    if (!aCopy.includes(a[i])) {
+      return a[i];
+    }
+  }
+};
+
+console.log(lonelyInteger([1,2,3,4,3,2,1])); // 4
