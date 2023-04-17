@@ -7,8 +7,6 @@
 // 9 8 9
 // The left-to-right diagonal = 1 + 5 + 9 = 15. The right to left diagonal = 3 + 5 + 9 = 18. Their absolute difference is 15 - 17 = 2.
 
-// Function description
-
 // diagonalDifference takes the following parameter:
 
 // int arr[n][m]: an array of integers
