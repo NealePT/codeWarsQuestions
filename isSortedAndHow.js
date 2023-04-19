@@ -6,7 +6,16 @@
 // You can assume the array will always be valid, and there will always be one correct answer.
 
 const isSortedAndHow = (arr) => {
-
+  let str = arr.join("");
+  let asc = arr.sort((a, b) => a - b).join("");
+  let desc = arr.sort((a, b) => b - a).join("");
+  if (str === asc) {
+    return "yes, ascending";
+  } else if (str === desc) {
+    return "yes, descending";
+  } else {
+    return "no";
+  }
 };
 
 console.log(isSortedAndHow([1, 2])); // yes, ascending
