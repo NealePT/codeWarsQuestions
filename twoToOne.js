@@ -9,7 +9,18 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 const longest = (s1, s2) => {
-
+  let result = [];
+  for (let i = 0; i < s1.length; i++) {
+    if (!result.includes(s1[i])) {
+      result.push(s1[i]);
+    }
+  }
+  for (let j = 0; j < s2.length; j++) {
+    if (!result.includes(s2[j])) {
+      result.push(s2[j]);
+    }
+  }
+  return result.sort().join("");
 };
 
 console.log(longest("aretheyhere", "yestheyarehere")); // aehrsty
