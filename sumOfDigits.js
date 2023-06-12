@@ -7,7 +7,7 @@
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
 
-const digital_root = (number) => {
+const digitalRoot = (number) => {
   let sum = 0;
   let digits = number.toString().split('');
   let realDigits = digits.map(Number);
@@ -15,12 +15,12 @@ const digital_root = (number) => {
     sum = sum + realDigits[i];
   }
   if (sum.toString().split('').length > 1) {
-    return digital_root(sum);
+    return digitalRoot(sum);
   }
   return sum;
 };
 
-console.log(digital_root(16)); // 7
-console.log(digital_root(942)); // 6
-console.log(digital_root(132189)); // 6
-console.log(digital_root(493193)); // 2
+console.log(digitalRoot(16)); // 7
+console.log(digitalRoot(942)); // 6
+console.log(digitalRoot(132189)); // 6
+console.log(digitalRoot(493193)); // 2
